@@ -1,0 +1,38 @@
+﻿
+@model List<CvProje1.Models.Experience>
+@{
+    ViewBag.Title = "ExperienceList";
+    Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
+}
+
+
+
+<h2 class="mb-4">Deneyim Listesi ve İşlemleri</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Başlık</th>
+        <th>Alt Başlık</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td><a href="/Experience/DeleteExperience/@item.ExperienceId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Experience/UpdateExperience/@item.ExperienceId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }}
+</table>
+
+
+<a href="/Experience/CreateExperience/" class="btn btn-info">Yeni Deneyim Girişi</a>
