@@ -1,0 +1,24 @@
+﻿@model List<CvProje1.Models.Profile>
+@{
+    ViewBag.Title = "ContactList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">İletişim Bilgilerim</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Telefon</th>
+        <th>E-Posta</th>
+        <th>Adres</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Phone</td>
+            <td>@item.Email</td>
+            <td>@item.Address</td>
+            <td><a href="/About/UpdateContact" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,21 @@
+﻿@model CvProje1.Models.Intern
+@{
+    ViewBag.Title = "UpdateIntern";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4"> Staj Güncelleme Ekranı</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.Id)
+    <label>Yıl</label>
+    @Html.TextBoxFor(x => x.Years, new { @class = "form-control" })
+    <br />
+    <label>Departman</label>
+    @Html.TextBoxFor(x => x.Department, new { @class = "form-control" })
+    <br />
+    <label>Şirket</label>
+    @Html.TextBoxFor(x => x.Company, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

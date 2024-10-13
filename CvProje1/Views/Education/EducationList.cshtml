@@ -1,4 +1,4 @@
-﻿
+﻿@model List<CvProje1.Models.Education>
 @{
     ViewBag.Title = "EducationList";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -9,20 +9,28 @@
 
 <table class="table table-bordered">
     <tr>
-        <th>Id</th>
-        <th>Başlık</th>
-        <th>Alt Başlık</th>
+
+        <th>Yıl</th>
+        <th>Okul</th>
+        <th>Bölüm</th>
+        <th>Açıklama</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
-    <tr>
-        <th>1</th>
-        <td>Bandırma Onyedi Eylül Üniversitesi</td>
-        <td>Yönetim Bilişim Sistemleri</td>
-        <td><a href="#" class="btn btn-danger">Sil</a></td>
-        <td><a href="#" class="btn btn-success">Güncelle</a></td>
-    </tr>
 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.SubTitle</td>
+            <td>@item.Description</td>
+            <td>@item.LongDescription</td>
+            <td><a href="/Education/DeleteEducation/@item.EducationId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Education/UpdateEducation/@item.EducationId" class="btn btn-success">Güncelle</a></td>
+
+
+        </tr>
+    }
 </table>
 <br />
 <a href="/Education/CreateEducation" class="btn btn-info">Yeni Eğitim Bilgisi Girişi</a>

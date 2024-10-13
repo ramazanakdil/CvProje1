@@ -1,0 +1,35 @@
+﻿@model List<CvProje1.Models.Testimonial>
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Değerlendirmeler Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Görsel Bağlantısı</th>
+        <th>Ad Soyad</th>
+        <th>Şehir</th>
+        <th>Açıklama</th>
+        <th>Yıldız Sayısı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ImageUrl</td>
+            <td>@item.Name</td>
+            <td>@item.City</td>
+            <td>@item.Description</td>
+            <td>@item.Stars</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.ID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+
+
+</table>
+
+<a href="/Testimonial/CreateTestimonial" class="btn btn-dark">Yeni Değerlendirme Ekle</a>

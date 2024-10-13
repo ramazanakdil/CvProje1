@@ -5,15 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
+using System.Web.Mvc;
 
 namespace CvProje1.Controllers
 {
     public class SkillController : Controller
     {
         DbMyPortfolioNightEntities context = new DbMyPortfolioNightEntities();
-        public ActionResult SkillList()
+        public ActionResult SkillList(int page = 1)
         {
-            var values = context.Skill.ToList();
+            var values = context.Skill.ToList().ToPagedList(page, 5);
             return View(values);
         }
 
@@ -47,6 +50,17 @@ namespace CvProje1.Controllers
         {
             var value = context.Skill.Find(id);
             return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateSkill(Skill skill)
+        {
+            var value = context.Skill.Find(skill.SkillId);
+            value.SkillName = skill.SkillName;
+            value.SkillId = skill.SkillId;
+            value.Rate = skill.Rate;
+            value.Status = skill.Status;
+            context.SaveChanges();
+            return RedirectToAction("SkillList");
         }
     }
 }

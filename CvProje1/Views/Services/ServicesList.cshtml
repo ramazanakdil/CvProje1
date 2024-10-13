@@ -1,0 +1,34 @@
+﻿@model List<CvProje1.Models.Service>
+@{
+    ViewBag.Title = "ServicesList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Hizmetlerimiz</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Hizmet İsmi</th>
+        <th>İcon</th>
+        <th>Açıklama</th>
+        <th>Madde1</th>
+        <th>Madde2</th>
+        <th>Madde3</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Icon</td>
+            <td>@item.Description</td>
+            <td>@item.Article1</td>
+            <td>@item.Article2</td>
+            <td>@item.Article3</td>
+            <td><a href="/Services/DeleteService/@item.ServiceId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Services/UpdateService/@item.ServiceId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Services/CreateService" class="btn btn-dark">Yeni Hizmet Ekle</a>

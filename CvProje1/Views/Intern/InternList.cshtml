@@ -1,0 +1,29 @@
+﻿@model List<CvProje1.Models.Intern>
+@{
+    ViewBag.Title = "InternList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Staj Bilgileri Ekranı</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Yıl</th>
+        <th>Şirket</th>
+        <th>Departman</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Years</td>
+            <td>@item.Company</td>
+            <td>@item.Department</td>
+            <td><a href="/Intern/DeleteIntern/@item.Id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Intern/UpdateIntern/@item.Id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/Intern/CreateIntern" class="btn btn-light">Yeni Staj Ekle</a>

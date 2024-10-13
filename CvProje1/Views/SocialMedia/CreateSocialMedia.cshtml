@@ -1,0 +1,22 @@
+﻿@model CvProje1.Models.SocialMedia
+@{
+    ViewBag.Title = "CreateSocialMedia";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Yeni Sosyal Medya Ekleme</h2>
+
+
+<form method="post">
+    <label>Sosyal Medya Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Sosyal Medya URL</label>
+    @Html.TextBoxFor(x => x.Url, new { @class = "form-control" })
+    <br />
+    <label>Sosyal Medya İkonu</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-danger">Sosyal Medya Hesabını Ekle</button>
+</form>
+

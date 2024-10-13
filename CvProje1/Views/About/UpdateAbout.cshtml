@@ -1,0 +1,41 @@
+﻿@model CvProje1.Models.Profile
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-3">Bilgileri Güncelle</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ProfileId)
+    <label>Doğum Tarihi</label>
+    @Html.TextBoxFor(x => x.BirthDate, new { @class = "form-control" })
+
+    <br />
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+
+    <br />
+    <label>Github</label>
+    @Html.TextBoxFor(x => x.Github, new { @class = "form-control" })
+
+    <br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+
+    <br />
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+
+    <br />
+    <label>Görsel URL</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+
+
+    <button class="btn btn-success">Değişiklikleri Kaydet</button>
+</form>
+

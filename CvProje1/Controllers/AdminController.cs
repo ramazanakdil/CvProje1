@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CvProje1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace CvProje1.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
+        DbMyPortfolioNightEntities context = new DbMyPortfolioNightEntities();
         public ActionResult Index()
         {
             return View();
@@ -20,6 +21,7 @@ namespace CvProje1.Controllers
         }
         public PartialViewResult PartialSidebar()
         {
+            ViewBag.Image = context.Profile.Select(x => x.ImageUrl).FirstOrDefault();
             return PartialView();
         }
         public PartialViewResult PartialNavbar()

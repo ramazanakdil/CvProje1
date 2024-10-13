@@ -1,0 +1,41 @@
+﻿@model List<CvProje1.Models.SocialMedia>
+@{
+    ViewBag.Title = "SocialMediaList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Sosyal Medya</th>
+        <th>URL</th>
+        <th>Icon</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.SocialMediaId</th>
+            <td>@item.Title</td>
+            <td>@item.Url</td>
+            <td>@item.Icon</td>
+            <td>
+                @if (item.Status == false)
+                {
+                    <a href="/SocialMedia/ToTrue/@item.SocialMediaId" class="btn btn-success">Aktif Yap</a>
+                }
+                else
+                {
+                    <a href="/SocialMedia/ToFalse/@item.SocialMediaId" class="btn btn-dark">Pasif Yap</a>
+                }
+            </td>
+            <td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaId" class="btn btn-warning">SİL</a></td>
+            <td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+
+<a href="/SocialMedia/CreateSocialMedia/" class="btn btn-info">Yeni Sosyal Medya Ekle</a>

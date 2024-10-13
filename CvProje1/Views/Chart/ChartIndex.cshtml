@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "ChartIndex";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2>Yeteneklerim ve Dereceleri</h2>
+
+<canvas id="myChart" width="400" height="200"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+
+        
+        var skillNames = @Html.Raw(Json.Encode(ViewBag.SkillNames));
+        var skillRates = @Html.Raw(Json.Encode(ViewBag.SkillRates));
+
+        
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar', 
+            data: {
+                labels: skillNames, 
+                datasets: [{
+                    label: 'Yetenek Dereceleri', 
+                    data: skillRates, 
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)', 
+                    borderColor: 'rgba(75, 192, 192, 1)', 
+                    borderWidth: 1 
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true 
+                    }
+                }
+            }
+        });
+    };
+</script>
+
+<style>
+    #chartContainer {
+        width: 80%; 
+        height: 400px; 
+        margin: auto; 
+    }
+</style>

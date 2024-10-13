@@ -8,6 +8,7 @@
 <table class="table table-bordered">
     <tr>
         <th>#</th>
+        <th>Kategori</th>
         <th>Gönderen</th>
         <th>Tarih</th>
         <th>Konu</th>
@@ -18,8 +19,46 @@
     @foreach (var item in Model)
     {
         count++;
+
+        string MessageClass = "";
+        switch (item.Category.CategoryName)
+        {
+            case "Teşekkür":
+                MessageClass = "background-color:#000000";
+                break;
+            case "Öneri":
+                MessageClass = "badge bg-secondary";
+                break;
+            case "Proje Talebi":
+                MessageClass = "badge bg-pink";
+                break;
+            case "Referans":
+                MessageClass = "badge bg-primary";
+                break;
+            case "Toplantı":
+                MessageClass = "badge bg-success";
+                break;
+            case "Görüşme":
+                MessageClass = "badge bg-purple";
+                break;
+            case "Reklam":
+                MessageClass = "badge bg-success";
+                break;
+            case "Diğer":
+                MessageClass = "badge bg-warning";
+                break;
+            default:
+                MessageClass = "badge bg-dark";
+                break;
+
+        }
+
+
+
+
         <tr>
             <td>@count</td>
+            <td><span class="@MessageClass p-2 " style="color:white; font-size: small">@item.Category.CategoryName</span></td>
             <td>@item.NameSurname</td>
             <td>@item.SendDate</td>
             <td>@item.Subject</td>
@@ -32,7 +71,7 @@
             {
                 <td><a href="/Message/ChangeMessageStatusToFalse/@item.ContactId" class="btn btn-dark">Okunmadı Olarak İşaretle</a></td>
             }
-            <td>Durum</td>
+
             <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
             <td><a href="#" class="btn btn-danger">Mesajı Sil</a></td>
 

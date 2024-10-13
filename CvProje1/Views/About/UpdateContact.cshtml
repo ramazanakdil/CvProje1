@@ -1,0 +1,22 @@
+﻿@model CvProje1.Models.Profile
+@{
+    ViewBag.Title = "UpdateContact";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">İletişim Bilgilerimi Güncelle</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ProfileId)
+    <label>Telefon</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br />
+    <label>E-Posta</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-danger">Güncelle</button>
+</form>

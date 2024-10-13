@@ -1,4 +1,4 @@
-﻿
+﻿@model CvProje1.Models.Education
 @{
     ViewBag.Title = "CreateEducation";
     Layout = "~/Views/Admin/Index.cshtml";
@@ -7,16 +7,22 @@
 <h2 class="mb-4">Yeni Eğitim Bilgisi Girişi</h2>
 
 <form method="post">
-    <label>Başlık</label>
-    <input type="text" class="form-control"/>
-    <br/>
-    <label>Alt Başlık</label>
-    <input type="text" class="form-control"/>
-    <br/>
+    @Html.HiddenFor(x => x.EducationId)
+    <label>Yıl</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>Okul</label>
+    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+    <br />
+    <label>Bölüm</label>
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
     <label>Açıklama</label>
-    <textarea rows="4" class="form-control"></textarea>
-    <br/>
-    <button class="btn btn-info">Eğitim Bilgisini Kaydet</button>
+    @Html.TextAreaFor(x => x.LongDescription, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Ekle</button>
+
 
 
 </form>

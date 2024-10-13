@@ -51,18 +51,55 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.5, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers.Crypto, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Helpers.Crypto.3.2.3\lib\net40\System.Web.Helpers.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -128,18 +165,29 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ChartController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InternController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\SkillController.cs" />
+    <Compile Include="Controllers\SocialMediaController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\About.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Admin.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Category.cs">
@@ -160,6 +208,9 @@
     <Compile Include="Models\Feature.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Intern.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +225,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Portfolio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Profile.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -190,9 +244,13 @@
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Testimonial.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ayse-testimonial.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -209,6 +267,56 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\elif-testimonial.jpg" />
+    <Content Include="Content\mehmet-testimonial.jpg" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\Pigra-1.0.0\css\bootstrap.min.css" />
+    <Content Include="Content\Pigra-1.0.0\css\style.css" />
+    <Content Include="Content\Pigra-1.0.0\img\about.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\blog-1.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\blog-2.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\blog-3.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\blog-4.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\header-img.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\Portfolio-1.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\portfolio-2.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\portfolio-3.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\testimonial-img-1.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\testimonial-img-2.jpg" />
+    <Content Include="Content\Pigra-1.0.0\img\testimonial-img-3.jpg" />
+    <Content Include="Content\Pigra-1.0.0\index.html" />
+    <Content Include="Content\Pigra-1.0.0\js\main.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\animate\animate.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\animate\animate.min.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\counterup\counterup.min.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\easing\easing.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\easing\easing.min.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\css\lightbox.min.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\images\close.png" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\images\loading.gif" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\images\next.png" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\images\prev.png" />
+    <Content Include="Content\Pigra-1.0.0\lib\lightbox\js\lightbox.min.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\ajax-loader.gif" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.carousel.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.carousel.min.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.theme.default.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.theme.default.min.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.theme.green.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.theme.green.min.css" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\assets\owl.video.play.png" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\owl.carousel.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\owl.carousel.min.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\waypoints\waypoints.min.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\wow\wow.js" />
+    <Content Include="Content\Pigra-1.0.0\lib\wow\wow.min.js" />
+    <Content Include="Content\Pigra-1.0.0\LICENSE.txt" />
+    <Content Include="Content\Pigra-1.0.0\personal-portfolio-website-template.jpg" />
+    <Content Include="Content\Pigra-1.0.0\READ-ME.txt" />
+    <Content Include="Content\portfolio-1.png" />
+    <Content Include="Content\portfolio-2.png" />
+    <Content Include="Content\portfolio-3.png" />
+    <Content Include="Content\ramazan-img.jpg" />
     <Content Include="Content\sidebar-01\css\bootstrap.min.css" />
     <Content Include="Content\sidebar-01\css\bootstrap\mixins\_border-radius.css" />
     <Content Include="Content\sidebar-01\css\bootstrap\mixins\_screen-reader.css" />
@@ -347,6 +455,92 @@
     <Content Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Content\Pigra-1.0.0\img\Thumbs.db" />
+    <Content Include="Content\Pigra-1.0.0\lib\owlcarousel\LICENSE" />
+    <Content Include="Content\Pigra-1.0.0\lib\waypoints\links.php" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\bootstrap.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_labels.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\forms\_validation.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_position.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_container.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\utilities\_api.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_accordion.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_alert.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_badge.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_button-group.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_buttons.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_card.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_carousel.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_close.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_containers.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_dropdown.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_forms.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_functions.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_grid.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_helpers.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_images.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_list-group.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_mixins.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_modal.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_nav.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_navbar.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_offcanvas.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_pagination.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_popover.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_progress.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_reboot.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_root.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_spinners.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_tables.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_toasts.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_tooltip.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_transitions.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_type.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_utilities.scss" />
+    <Content Include="Content\Pigra-1.0.0\scss\bootstrap\scss\_variables.scss" />
+    <Content Include="Content\ramazan-cv.pdf" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -388,10 +582,45 @@
     <Content Include="Views\Experience\ExperienceList.cshtml" />
     <Content Include="Views\Experience\CreateExperience.cshtml" />
     <Content Include="Views\Experience\UpdateExperience.cshtml" />
+    <Content Include="Views\Statistics\Index.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialScripts.cshtml" />
+    <Content Include="Views\Default\PartialNavbar.cshtml" />
+    <Content Include="Views\Default\PartialHeader.cshtml" />
+    <Content Include="Views\Default\PartialAbout.cshtml" />
+    <Content Include="Views\Default\PartialExperience.cshtml" />
+    <Content Include="Views\Default\PartialSkill.cshtml" />
+    <Content Include="Views\Contact\PartialContactSidebar.cshtml" />
+    <Content Include="Views\Contact\PartialContactDetail.cshtml" />
+    <Content Include="Views\Contact\PartialContactLocation.cshtml" />
+    <Content Include="Views\Contact\PartialFooter.cshtml" />
+    <Content Include="Views\Default\PartialEducation.cshtml" />
+    <Content Include="Views\Default\PartialService.cshtml" />
+    <Content Include="Views\Default\PartialPortfolio.cshtml" />
+    <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialIntern.cshtml" />
+    <Content Include="Views\About\AboutList.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\SocialMedia\SocialMediaList.cshtml" />
+    <Content Include="Views\SocialMedia\CreateSocialMedia.cshtml" />
+    <Content Include="Views\SocialMedia\UpdateSocialMedia.cshtml" />
+    <Content Include="Views\Chart\ChartIndex.cshtml" />
+    <Content Include="Views\Education\UpdateEducation.cshtml" />
+    <Content Include="Views\Intern\InternList.cshtml" />
+    <Content Include="Views\Intern\CreateIntern.cshtml" />
+    <Content Include="Views\Intern\UpdateIntern.cshtml" />
+    <Content Include="Views\About\ContactList.cshtml" />
+    <Content Include="Views\About\UpdateContact.cshtml" />
+    <Content Include="Views\Services\ServicesList.cshtml" />
+    <Content Include="Views\Services\CreateService.cshtml" />
+    <Content Include="Views\Services\UpdateService.cshtml" />
+    <Content Include="Views\Testimonial\TestimonialList.cshtml" />
+    <Content Include="Views\Testimonial\CreateTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Statistics\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

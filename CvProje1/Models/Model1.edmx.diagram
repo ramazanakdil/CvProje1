@@ -18,6 +18,10 @@
         <EntityTypeShape EntityType="DbMyPortfolioNightModel.SocialMedia" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbMyPortfolioNightModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="DbMyPortfolioNightModel.FK_Contact_Category1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbMyPortfolioNightModel.Admin" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioNightModel.Portfolio" Width="1.5" PointX="9.375" PointY="6.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioNightModel.Testimonial" Width="1.5" PointX="9.375" PointY="9.75" />
+        <EntityTypeShape EntityType="DbMyPortfolioNightModel.Intern" Width="1.5" PointX="10.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

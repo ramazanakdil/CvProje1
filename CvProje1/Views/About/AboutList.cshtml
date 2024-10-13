@@ -1,0 +1,36 @@
+﻿@model List<CvProje1.Models.Profile>
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h3 class="mb-4"> Hakkımda Alanı </h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>Telefon</th>
+        <th>Github</th>
+        <th>Adres</th>
+        <th>Açıklama</th>
+        <th>Bilgileri Güncelle</th>
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.ProfileId</th>
+            <td>@item.Email</td>
+            <td>@item.Phone</td>
+            <td>@item.Github</td>
+            <td>@item.Address</td>
+            <td>@item.Description</td>
+            <td><a href="/About/AboutUpdate/@item.ProfileId" class="btn btn-success">Bilgileri Güncelle</a></td>
+
+        </tr>
+    }
+
+
+</table>
+

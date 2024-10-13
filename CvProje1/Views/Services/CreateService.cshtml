@@ -1,0 +1,31 @@
+﻿@model CvProje1.Models.Service
+@{
+    ViewBag.Title = "CreateService";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<h2 class="mb-4">Hizmet Ekleme Ekranı</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.ServiceId)
+    <label>Hizmet İsmi</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    <label>İcon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    <label>Madde 1</label>
+    @Html.TextBoxFor(x => x.Article1, new { @class = "form-control" })
+    <br />
+    <label>Madde 2</label>
+    @Html.TextBoxFor(x => x.Article2, new { @class = "form-control" })
+    <br />
+    <label>Madde 3</label>
+    @Html.TextBoxFor(x => x.Article3, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-dark">Ekle</button>
+</form>
