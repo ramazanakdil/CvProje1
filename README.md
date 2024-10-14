@@ -26,14 +26,24 @@ Projede Kullanılan Teknolojiler:
 📈 Veri Görselleştirme: Chart.js ile veriler etkili bir şekilde grafiksel olarak sunuldu.
 
 
-![Ekran görüntüsü 2024-10-13 201333](https://github.com/user-attachments/assets/46576d23-d08b-49fa-87bd-67628d22ff6e)
-![Ekran görüntüsü 2024-10-13 201342](https://github.com/user-attachments/assets/c61220fa-59ad-447c-bd5f-d4f0a1bf34a7)
-![Ekran görüntüsü 2024-10-13 201352](https://github.com/user-attachments/assets/479dcaac-dc83-4af9-bcf1-24a6ac4a795c)
-![Ekran görüntüsü 2024-10-13 201410](https://github.com/user-attachments/assets/75374eb2-cc56-43d2-8afd-75ca7f6d559e)
-![Ekran görüntüsü 2024-10-13 201459](https://github.com/user-attachments/assets/6be60521-e7ff-4161-8512-d005c5d49e6d)
-![Ekran görüntüsü 2024-10-13 201512](https://github.com/user-attachments/assets/87e95bb3-c1b5-4b62-a7cc-dbf6ebc66bfd)
-![Ekran görüntüsü 2024-10-13 201523](https://github.com/user-attachments/assets/d943148c-08fa-4239-b3d3-fa3a561731c4)
-![Ekran görüntüsü 2024-10-13 201534](https://github.com/user-attachments/assets/89329bbf-649f-4eed-9ad5-950e97849ea8)
-![Ekran görüntüsü 2024-10-13 201553](https://github.com/user-attachments/assets/1e4d0002-f6d1-4627-ad9c-6a58a4bd4f5d)
+
+
 ![Ekran görüntüsü 2024-10-13 201323](https://github.com/user-attachments/assets/7cd7c7c2-1365-48b5-8430-ce806f7e4538)
 
+![Ekran görüntüsü 2024-10-13 201553](https://github.com/user-attachments/assets/1e4d0002-f6d1-4627-ad9c-6a58a4bd4f5d)
+
+![Ekran görüntüsü 2024-10-13 201534](https://github.com/user-attachments/assets/89329bbf-649f-4eed-9ad5-950e97849ea8)
+
+![Ekran görüntüsü 2024-10-13 201523](https://github.com/user-attachments/assets/d943148c-08fa-4239-b3d3-fa3a561731c4)
+
+![Ekran görüntüsü 2024-10-13 201512](https://github.com/user-attachments/assets/87e95bb3-c1b5-4b62-a7cc-dbf6ebc66bfd)
+
+![Ekran görüntüsü 2024-10-13 201459](https://github.com/user-attachments/assets/6be60521-e7ff-4161-8512-d005c5d49e6d)
+
+![Ekran görüntüsü 2024-10-13 201410](https://github.com/user-attachments/assets/75374eb2-cc56-43d2-8afd-75ca7f6d559e)
+
+![Ekran görüntüsü 2024-10-13 201352](https://github.com/user-attachments/assets/479dcaac-dc83-4af9-bcf1-24a6ac4a795c)
+
+![Ekran görüntüsü 2024-10-13 201342](https://github.com/user-attachments/assets/c61220fa-59ad-447c-bd5f-d4f0a1bf34a7)
+
+![Ekran görüntüsü 2024-10-13 201333](https://github.com/user-attachments/assets/46576d23-d08b-49fa-87bd-67628d22ff6e)
